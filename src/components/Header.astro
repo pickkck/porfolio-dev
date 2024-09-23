@@ -1,21 +1,28 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro"
+import { getRelativeLocaleUrl } from "astro:i18n"
+import { useTranslations, getLangFromUrl } from "../i18n/utils";
+
+  const lang = getLangFromUrl(Astro.url);
+  const t = useTranslations(lang);
+
+
 
 const navItems = [
   {
-    title: "Inicio",
+    title: t('Nav.home'),
     label: "top",
-    url: "/#top",
+    url: getRelativeLocaleUrl(lang, '#top').replace(/\/$/, ''),
   },
   {
-    title: "Experiencia",
+    title: t('Nav.experience'),
     label: "experience",
-    url: "/#experience",
+    url: getRelativeLocaleUrl(lang, "#experience").replace(/\/$/, ''),
   },
   {
-    title: "Habilidades",
+    title: t('Nav.skills'),
     label: "skills",
-    url: "/#skills",
+    url: getRelativeLocaleUrl(lang, "#skills").replace(/\/$/, ''),
   },
   // {
   //   title: "Proyectos",
@@ -23,9 +30,9 @@ const navItems = [
   //   url: "/#projects",
   // },
   {
-    title: "Sobre mí",
+    title: t('Nav.about'),
     label: "about",
-    url: "/#about",
+    url: getRelativeLocaleUrl(lang, "#about").replace(/\/$/, ''),
   },
 ]
 ---

@@ -1,34 +1,36 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import { useTranslations, getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+
 const EXPERIENCIE = [
   {
-    date: "Abril 2021 - Actualidad",
-    title: "Back-End Developer",
-    company: "Deporprive",
-    description:
-      "Desempeñé el rol de Líder de Proyecto en la creación de una nueva línea de servicios de la empresa, donde desarrollé algoritmos de web scraping para recopilar más de 4 millones de datos relevantes para el crecimiento del negocio. A través de este proyecto, logramos fortalecer las relaciones comerciales con diversos clientes, generando beneficios inmediatos para la empresa.",
+    date: t('Experience.Deporprive.date'),
+    title: t('Experience.Deporprive.title'),
+    company: t('Experience.Deporprive.company'),
+    description: t('Experience.Deporprive.description'),
   },
-  {
-    date: "Febrero 2023 - Octubre 2023",
-    title: "Front-End Developer",
-    company: "GoFun World SL",
-    description:
-      "Participación en el desarrollo de actividades y tareas relacionadas con el front-end en el sistema, lo que ha contribuido significativamente a la creación de mejoras y al mantenimiento de la calidad del sistema. A lo largo del tiempo, he adquirido experiencia en tecnologías avanzadas como Node.js y Kotlin, permitiéndome desarrollar endpoints, llevar a cabo pruebas y asumir responsabilidades full-stack, abordando así nuevos desafíos en el proyecto.",
+  { 
+    date: t('Experience.GoFunWorldSL.date'),
+    title: t('Experience.GoFunWorldSL.title'),
+    company: t('Experience.GoFunWorldSL.company'),  
+    description: t('Experience.GoFunWorldSL.description'),
   },
-  {
-    date: "Noviembre 2019 - Marzo 2021",
-    title: "Full-Stack Developer",
-    company: "GuayabaTech",
-    description:
-      "Implementación exitosa del framework Laravel para fortalecer el back-end, logrando un notable aumento en la seguridad de los proyectos y una optimización efectiva en la consulta de microservicios. Colaboré en diversos proyectos que permitieron identificar y satisfacer las necesidades críticas de las empresas a las que prestamos nuestros servicios de desarrollo.",
+  { 
+    date: t('Experience.GuayabaTech.date'),
+    title: t('Experience.GuayabaTech.title'),
+    company: t('Experience.GuayabaTech.company'),
+    description: t('Experience.GuayabaTech.description'),
   },
-  {
-    date: "Junio 2018 - Noviembre 2019",
-    title: "Administrador de Sistemas",
-    company: "Venegas & Chavez Consultores",
-    description:
-      "Establecí el área de sistemas en un despacho contable, creando un sistema que transformó procesos manuales en digitales. Basado en la investigación previa de los contadores, este sistema calcula el riesgo financiero por incumplimientos legales, evaluando la probabilidad de auditoría por parte de las autoridades.",
-  },
+  { 
+    date: t('Experience.VenegasChavezConsultores.date'),
+    title: t('Experience.VenegasChavezConsultores.title'),
+    company: t('Experience.VenegasChavezConsultores.company'),
+    description: t('Experience.VenegasChavezConsultores.description'),
+  }
 ]
 ---
 

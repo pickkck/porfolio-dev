@@ -1,5 +1,11 @@
 ---
- const personalImageAlt = "Aaron Ramirez"
+const personalImageAlt = "Aaron Ramirez"
+import { useTranslations, getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
@@ -7,21 +13,21 @@
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Soy Aarón Ramírez, ingeniero en sistemas con mas de 5 años de experiencia en la industria del desarrollo web. Actualmente trabajo como <strong
-        >desarrollador Back-End, bueno ese es el titulo de mi puesto, pero realmente hago labores Full-Stack</strong
-      >.
+      {t('AboutMe.description')} <strong
+        >{t('AboutMe.description.strong')}</strong
+      >
     </p>
 
     <p>
-      A lo largo de mi carrera profesional he acumulado exitos interesantes como <strong
-        >realizar web scrapping de resultados de carreras obteniendo mas de 4M de registros de data.</strong
-      > He lidereado equipos y proyectos de desarrollo web.
+      {t('AboutMe.description.more')} <strong
+        >{t('AboutMe.description.more.strong')}</strong
+      > {t('AboutMe.description.more.2')}
     </p>
 
     <p>
-      Mi vida no es solo el desarrollo tambien me gusta hacer deporte, <strong
-        >he participado en diferentes carreras de <em class="italic">Trail Running</em> lo que hoy despertó mi interes en el <em class="italic">Mountain Bike</em></strong
-      >. En palabras cortas disfruto mucho el deporte Outdoor. 
+      {t('AboutMe.description.more.3')}<strong
+        >{t('AboutMe.description.more.strong.2')} <em class="italic">{t('AboutMe.description.more.strong.3')}</em> {t('AboutMe.description.more.strong.4')} <em class="italic">{t('AboutMe.description.more.strong.5')}</em></strong
+      > {t('AboutMe.description.more.6')} 
     </p>
   </div>
 
