@@ -2,11 +2,11 @@
   "Layout.title": "Aarón Ramírez - Desarrollador Web con mas de 5 años de experiencia",
   "Layout.description": "Web Developer | VueJS | Laravel | Ionic | Angular | JavaScript | PHP | Siempre en busqueda de nuevos retos 💪🏼", 
   "Layout.experience": "Experiencia laboral",
-  "Layout.skills": "Habilidades",
+  "Layout.projects": "Proyectos",
   "Layout.about": "Sobre mí",
   "Nav.home": "Inicio",
   "Nav.experience": "Experiencia",
-  "Nav.skills": "Habilidades",
+  "Nav.projects": "Proyectos",
   "Nav.about": "Sobre mí",
   "Hero.badge": "Disponible para trabajar",
   "Hero.title": "Hola, soy Aarón",
@@ -39,5 +39,6 @@
   "AboutMe.description.more.strong.3": "Trail Running",
   "AboutMe.description.more.strong.4": " lo que hoy despertó mi interes en el ",
   "AboutMe.description.more.strong.5": "Mountain Bike",
-  "AboutMe.description.more.6": ". En palabras cortas disfruto mucho el deporte Outdoor. "
+  "AboutMe.description.more.6": ". En palabras cortas disfruto mucho el deporte Outdoor. ",
+  "Projects.title": "Muy pronto..."
 }

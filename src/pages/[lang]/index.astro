@@ -5,10 +5,10 @@ import Briefcase from "../../components/icons/Briefcase.astro"
 import CodeIcon from "../../components/icons/Code.astro"
 import Experience from "../../components/Experience.astro"
 import ProfileCheck from "../../components/icons/ProfileCheck.astro"
-import Projects from "../../components/Projects.astro"
+import ProjectsExample from "../../components/Projects-example.astro"
 import SectionContainer from "../../components/SectionContainer.astro"
 import Hero from "../../components/Hero.astro"
-import Habilities from "../../components/Habilities.astro"
+import Projects from "../../components/Projects.astro"
 import { useTranslations, getLangFromUrl } from "../../i18n/utils";
 
 
@@ -59,14 +59,14 @@ import { useTranslations, getLangFromUrl } from "../../i18n/utils";
       <Projects />
     </SectionContainer> -->
 
-    <SectionContainer id="skills">
+    <SectionContainer id="projects">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
       >
         <CodeIcon class="size-7" />
-        {t('Layout.skills')}
+        {t('Layout.projects')}
       </h2>
-      <Habilities />
+      <Projects />
     </SectionContainer>
 
     <SectionContainer id="about">
