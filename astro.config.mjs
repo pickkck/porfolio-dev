@@ -3,17 +3,17 @@ import tailwind from "@astrojs/tailwind";
 
 const getDefaultLanguage = () => {
   const systemLang = process.env.LANG || process.env.LANGUAGE || 'en';
-  return systemLang.startsWith('es') ? '/es/' : '/en/';
+  return systemLang.startsWith('es') ? 'es' : 'en';
 };
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
   redirects: {
-    '/': getDefaultLanguage(),
+    '/': `/${getDefaultLanguage()}/`,
   },
   i18n: {
-    defaultLocale: "es",
+    defaultLocale: getDefaultLanguage(),
     locales: ["es", "en"],
     routing: {
       prefixDefaultLocale: true,
