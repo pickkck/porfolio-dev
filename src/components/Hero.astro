@@ -10,13 +10,13 @@ import { useTranslations, getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 
-const cvUrl = `/cv-${lang}.pdf`;
+const cvUrl = `/documents/cv-${lang}.pdf`;
 
 const t = useTranslations(lang);
 ---
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <img class="rounded-20 w-[100px] md:w-[250px] " src="/no-bg.png" alt={personalImageAlt} />
+    <img class="rounded-20 w-[100px] md:w-[250px]" src="/images/no-bg.png" alt={personalImageAlt} />
     <a
       href="https://linkedin.com/in/aaronrmzv"
       target="_blank"
