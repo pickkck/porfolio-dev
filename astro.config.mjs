@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless';
 import tailwind from "@astrojs/tailwind";
 
 const getDefaultLanguage = () => {
@@ -18,5 +19,8 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: true,
     }
-  }
+  },
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  }),
 });
